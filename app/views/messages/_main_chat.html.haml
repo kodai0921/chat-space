@@ -1,0 +1,36 @@
+.main_chat
+  .main_chat__group-info
+    .main_chat__group-info__group-edit
+      .main_chat__group-info__group-edit--group-name
+        test 
+      = link_to "#", class:"main_chat__group-info__group-edit--edit-btn" do
+        Edit 
+    .main_chat__group-info__group-member
+      Member : masa 
+  .main_chat__message-list
+    .main_chat__message-list__section
+      .main_chat__message-list__section__name_date
+        .main_chat__message-list__section__name_date__name
+          masa 
+        .main_chat__message-list__section__name_date__date
+          2019/11/20(Wed) 17:46:23
+      .main_chat__message-list__section__message
+        hello
+      .main_chat__message-list__section__name_date
+        .main_chat__message-list__section__name_date__name
+          masa 
+        .main_chat__message-list__section__name_date__date
+          2019/11/20(Wed) 17:46:23
+      .main_chat__message-list__section__message
+        hellohello
+        
+  .main_chat__message-form
+    %form{class: "main_chat__message-form__form"}
+      .main_chat__message-form__form__form-box
+        %input{class: "main_chat__message-form__form__form-box__input", type: "text", placeholder: "type a message"}
+          %label{class: "main_chat__message-form__form__form-box__icon"}
+            <i class="fas fa-images"></i>
+            %input{class: "main_chat__message-form__form__form-box__icon--icon-message",type: "file"}
+      %input{class: "main_chat__message-form__form__send-btn", type: "submit", value: "Send"}
+        
+
