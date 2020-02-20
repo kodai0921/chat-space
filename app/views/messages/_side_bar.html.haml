@@ -2,12 +2,12 @@
   .side_bar__user-name
     .side_bar__user-name__top-items
       .side_bar__user-name__top-items__name
-        kodai
+        = current_user.name
       .side_bar__user-name__top-items__icons
         = link_to "#", class:"side_bar__user-name__top-items__icons--icon1" do
           <i class="far fa-edit"></i>
           %span<>
-        = link_to "#", class:"side_bar__user-name__top-items__icons--icon2" do
+        = link_to edit_user_path(current_user), class:"side_bar__user-name__top-items__icons--icon2" do
           <i class="fas fa-cog"></i>
           %span<>
   .side_bar__group-list
