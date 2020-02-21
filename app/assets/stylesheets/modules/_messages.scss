@@ -51,13 +51,21 @@
     &__section{
       width: 100%;
       padding: 20px 20px 40px;
-      color: #ffffff;
-      &__group-name{
-        font-size: 15px;
-        margin-bottom: 5px;
-      }
-      &__message{
-        font-size: 11px;
+      .group{
+        padding-bottom: 40px;
+        .link1{
+          text-decoration: none;
+          color: #ffffff;
+        
+          .side_bar__group-list__section__group-name{
+            font-size: 15px;
+            margin-bottom: 5px;
+            text-decoration: none;
+          }
+          .side_bar__group-list__section__message{
+            font-size: 11px;
+          }
+        }
       }
     }
   }

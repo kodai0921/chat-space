@@ -4,7 +4,7 @@
       .side_bar__user-name__top-items__name
         = current_user.name
       .side_bar__user-name__top-items__icons
-        = link_to "#", class:"side_bar__user-name__top-items__icons--icon1" do
+        = link_to new_group_path, class:"side_bar__user-name__top-items__icons--icon1" do
           <i class="far fa-edit"></i>
           %span<>
         = link_to edit_user_path(current_user), class:"side_bar__user-name__top-items__icons--icon2" do
@@ -12,22 +12,13 @@
           %span<>
   .side_bar__group-list
     .side_bar__group-list__section
-      .side_bar__group-list__section__group-name
-        <b>techcamp</b>
-      .side_bar__group-list__section__message
-        <b>まだメッセがないよ</b>
-
-    .side_bar__group-list__section
-      .side_bar__group-list__section__group-name
-        <b>techcamp</b>
-      .side_bar__group-list__section__message
-        <b>まだメッセがないよ</b>
-
-    .side_bar__group-list__section
-      .side_bar__group-list__section__group-name
-        <b>techcamp</b>
-      .side_bar__group-list__section__message
-        <b>まだメッセがないよ</b>
+      - current_user.groups.each do |group|
+        .group
+          = link_to "#", class:"link1" do
+            .side_bar__group-list__section__group-name
+              = group.name
+            .side_bar__group-list__section__message
+              <b>まだメッセがないよ</b>
 
 
 
