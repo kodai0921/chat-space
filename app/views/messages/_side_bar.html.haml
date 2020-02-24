@@ -5,20 +5,20 @@
         = current_user.name
       .side_bar__user-name__top-items__icons
         = link_to new_group_path, class:"side_bar__user-name__top-items__icons--icon1" do
-          <i class="far fa-edit"></i>
+          = icon('far', 'edit')
           %span<>
         = link_to edit_user_path(current_user), class:"side_bar__user-name__top-items__icons--icon2" do
-          <i class="fas fa-cog"></i>
+          = icon('fas', 'cog')
           %span<>
-  .side_bar__group-list
-    .side_bar__group-list__section
+  .side_bar__group_list
+    .side_bar__group_list__section
       - current_user.groups.each do |group|
         .group
-          = link_to "#", class:"link1" do
-            .side_bar__group-list__section__group-name
+          = link_to group_messages_path(group), class:"link1" do
+            .side_bar__group_list__section__group-name
               = group.name
-            .side_bar__group-list__section__message
-              <b>まだメッセがないよ</b>
+            .side_bar__group_list__section__message
+              = group.show_side_bar__group_list__section__message
 
 
 
