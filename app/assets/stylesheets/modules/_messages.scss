@@ -44,7 +44,7 @@
       }
     }
   }
-  &__group-list {
+  &__group_list {
     height: calc(100vh - 100px);
     width: 100%;
     background-color: #2f3e51;
@@ -57,12 +57,12 @@
           text-decoration: none;
           color: #ffffff;
         
-          .side_bar__group-list__section__group-name{
+          .side_bar__group_list__section__group-name{
             font-size: 15px;
             margin-bottom: 5px;
             text-decoration: none;
           }
-          .side_bar__group-list__section__message{
+          .side_bar__group_list__section__message{
             font-size: 11px;
           }
         }
@@ -142,25 +142,28 @@
       height: 100%;
       display: flex;
       align-items: center;
-      &__form-box{
+      
+      
+
+        
+      .new_message{
         height: 50px;
         width: 100%;
-        background-color: white;
         margin-left: 40px;
         display: flex;
         align-items: center;
         position: relative;
-        &__input{
+        .f__input{
           height: 100%;
           width: 100%;
           border: transparent;
           padding-left: 10px;
           position: relative;
         }
-        &__icon{
+        .f__icon{
           margin-right: 10px;
           position: absolute;
-          right: 10px;
+          right: 170px;
           &--icon-message{
             display: none;
             position: absolute;
@@ -168,7 +171,7 @@
           }
         }
       }
-      &__send-btn{
+      .f__send-btn{
         height: 50px;
         width: 120px;
         color: white;
